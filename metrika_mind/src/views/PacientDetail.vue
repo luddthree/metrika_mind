@@ -181,7 +181,7 @@
 
       <!-- Another Field Example -->
       <div class="flex flex-col">
-        <label class="font-bold text-green-400 mb-1">Country:</label>
+        <label class="font-bold text-green-400 mb-1">field:</label>
         <input 
           type="text" 
           placeholder="" 
