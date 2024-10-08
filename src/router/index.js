@@ -4,6 +4,7 @@ import QuestionPage from '../views/QuestionPage.vue';
 import PacientPage from '../views/PacientPage.vue';
 import ProfilePage from '../views/ProfilePage.vue';
 import PacientDetail from '../views/PacientDetail.vue'; // Import the detail page component
+import CreatePacient from '../views/CreatePacient.vue'; // Import the detail page component
 
 
 
@@ -33,6 +34,11 @@ const routes = [
     name: 'PacientDetail',
     component: PacientDetail,
     props: true, // Allows the route to pass the `id` as a prop to the component
+  },
+  {
+    path: '/create',
+    name: 'CreatePacient',
+    component: CreatePacient, // Updated component
   },
 ];
 
