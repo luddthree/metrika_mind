@@ -1,4 +1,4 @@
-# metrika_mind
+# Metrika mind
 
 ## Project setup
 ```
