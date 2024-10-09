@@ -86,8 +86,8 @@
     </div>
 
     <!-- Add Patient Button -->
-    <div class="flex justify-end mt-6">
-      <button class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600">
+    <div class="flex sticky justify-end mt-6">
+      <button class="bg-green-500  text-white px-6 py-3 rounded-lg hover:bg-green-600">
         Añadir paciente
       </button>
     </div>
