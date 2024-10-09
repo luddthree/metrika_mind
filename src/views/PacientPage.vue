@@ -87,9 +87,9 @@
 
     <!-- Add Patient Button -->
     <div class="flex sticky justify-end mt-6">
-      <button class="bg-green-500  text-white px-6 py-3 rounded-lg hover:bg-green-600">
+      <router-link :to="{ name: 'CreatePacient'}" class="bg-green-500  text-white px-6 py-3 rounded-lg hover:bg-green-600">
         Añadir paciente
-      </button>
+        </router-link>
     </div>
   </div>
 </template>
@@ -111,8 +111,10 @@ export default {
   },
   methods: {
     async fetchPatients() {
+      const PACIENT = process.env.VUE_APP_PACIENT;
+
       try {
-        const response = await axios.get('https://rdi.behit.net/metrikamind/api/patients_list');
+        const response = await axios.get(PACIENT);
         
         this.patients = Object.entries(response.data).map(([id, data]) => ({
           id,

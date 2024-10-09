@@ -130,7 +130,7 @@
                 <th></th>
               </tr>
             </thead>
-            <!-- <tbody>
+            <tbody>
             <tr
               v-for="(question, index) in filteredQuestions"
               :key="index"
@@ -159,14 +159,11 @@
                 </button>
               </td>
             </tr>
-          </tbody> -->
+          </tbody>
           </table>
         </div>
-      </div>
-    </div>
-
-    <!-- Loading Indicator -->
-    <!-- <div class="flex flex-col justify-center items-center h-screen">
+            <!-- Loading Indicator -->
+    <div v-if="loading" class="flex flex-col justify-center items-center h-screen">
       <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
         viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -177,7 +174,11 @@
           fill="currentFill" />
       </svg>
       <p class="mt-2 text-gray-600">Cargando datos del paciente...</p>
-    </div> -->
+    </div>
+      </div>
+    </div>
+
+
 
     <!-- <router-link to="/pacients" class="mt-4 text-blue-500 hover:underline">Volver a la lista de pacientes</router-link> -->
   </div>
@@ -203,8 +204,10 @@ export default {
       this.activeTab = tab;
     },
     async fetchQuestions() {
+      const QUESTION = process.env.VUE_APP_QUESTION;
+
       try { //questiones api
-        const response = await axios.get('https://rdi.behit.net/metrikamind/api/patients_list');
+        const response = await axios.get(QUESTION);
 
         this.questions = Object.entries(response.data).map(([id, data]) => ({
           id,
@@ -251,19 +254,6 @@ export default {
   },
   async mounted() {
     this.fetchQuestions();
-    try { //pacient api
-      const response = await axios.get('https://rdi.behit.net/metrikamind/api/patients_list');
-      const patientData = response.data[this.id]; // Access the patient by ID
-
-      this.patient = {
-        id: this.id,
-        name: patientData[0],
-        email: patientData[1],
-        questions: patientData[2],
-      };
-    } catch (error) {
-      console.error('Error fetching patient data:', error);
-    }
   },
 };
 </script>

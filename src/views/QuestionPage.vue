@@ -96,8 +96,10 @@ export default {
   },
   methods: {
     async fetchQuestions() {
+      const QUESTION = process.env.VUE_APP_QUESTION;
+
       try {
-        const response = await axios.get('https://rdi.behit.net/metrikamind/api/patients_list');
+        const response = await axios.get(QUESTION);
         
         this.questions = Object.entries(response.data).map(([id, data]) => ({
           id,
