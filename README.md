@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# metrika_mind
-=======
 # Metrika mind
 >>>>>>> 154708086e9aa888b000261ff99310f12b881868
 
