@@ -47,11 +47,11 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="">
   <tr
     v-for="(patient, index) in filteredPatients"
     :key="index"
-    class="hover:bg-green-100 bg-white transition-colors"
+    class="hover:bg-green-100 mb-2 rounded-xl shadow-xl bg-white transition-colors"
   >
     <td class="py-3 px-6 text-green-600 font-medium">
       <router-link :to="{ name: 'PacientDetail', params: { id: patient.id } }">
