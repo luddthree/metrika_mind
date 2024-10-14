@@ -1,8 +1,18 @@
 <template>
   <div class="bg-gray-50 px-10">
     <div class="p-5">
-      <PizzaGraph />
+    <!-- Table for the pizza graphs -->
+    <div class="grid grid-cols-2 gap-4">
+      <!-- First PizzaGraph -->
+      <div class="p-5">
+        <PizzaGraph />
+      </div>
+      <!-- Second PizzaGraph -->
+      <div class="p-5">
+        <p>table heere</p>
+      </div>
     </div>
+  </div>
 
     <div class="p-5">
       <LineGraph />
