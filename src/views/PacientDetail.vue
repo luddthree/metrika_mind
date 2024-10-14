@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-6 bg-gray-50 min-h-screen">
+  <div class="p-6 bg-gray-50 min-h-screen">
     <div v-if="patient">
       <p class="text-2xl text-gray-900 font-bold mb-4 mt-3 ml-2">{{ patient.name }}</p>
 
