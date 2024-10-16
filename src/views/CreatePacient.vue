@@ -204,7 +204,7 @@ export default {
       this.activeTab = tab;
     },
     async fetchQuestions() {
-      const QUESTION = process.env.VUE_APP_QUESTION;
+      const QUESTION = import.meta.env.VITE_QUESTION;
 
       try { //questiones api
         const response = await axios.get(QUESTION);

@@ -96,7 +96,7 @@ export default {
   },
   methods: {
     async fetchQuestions() {
-      const QUESTION = process.env.VUE_APP_QUESTION;
+      const QUESTION = import.meta.env.VITE_QUESTION;
 
       try {
         const response = await axios.get(QUESTION);

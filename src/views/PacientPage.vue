@@ -111,7 +111,7 @@ export default {
   },
   methods: {
     async fetchPatients() {
-      const PACIENT = process.env.VUE_APP_PACIENT;
+      const PACIENT = import.meta.env.VITE_PACIENT;
 
       try {
         const response = await axios.get(PACIENT);

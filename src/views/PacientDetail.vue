@@ -219,7 +219,7 @@ export default {
       this.activeTab = tab;
     },
     async fetchQuestions() {
-      const QUESTION = process.env.VUE_APP_QUESTION;
+      const QUESTION = import.meta.env.VITE_QUESTION;
 
       try { //questiones api
         const response = await axios.get(QUESTION);
@@ -240,7 +240,7 @@ export default {
     },
 
     async fetchPatients() {
-      const PACIENT = process.env.VUE_APP_PACIENT;
+      const PACIENT = import.meta.env.VITE_PACIENT;
 
       try { //pacient api
         const response = await axios.get(PACIENT);
