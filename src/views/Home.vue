@@ -8,7 +8,7 @@
     <!-- Table for the pizza graphs -->
     <div class="grid grid-cols-2 gap-4">
       <!-- First PizzaGraph -->
-      <div class="p-5">
+      <div class="">
         <PizzaGraph />
       </div>
       <!-- Second PizzaGraph -->
