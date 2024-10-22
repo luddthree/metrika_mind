@@ -1,3 +1,23 @@
+
+# auth_config.json
+```json
+{
+  "domain": "<YOUR AUTH0 DOMAIN>",
+  "clientId": "<YOUR AUTH0 CLIENT ID>"
+}
+```
+
+# .env
+```env
+VITE_PACIENT='api route here'
+VITE_QUESTION='api route here'
+```
+
+
+
+
+
+
 # Scenario #1 - Logging In and Gated Content
 
 This sample demonstrates:
