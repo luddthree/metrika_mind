@@ -46,6 +46,10 @@
       <div v-if="activeTab === 'Estadisicas'">
         <p class="font-bold text-green-400 mt-5 mb-5 text-lg">Estadisicas</p>
         <p class=""><strong>ID:</strong> {{ patient.id }}</p>
+
+        <div class="p-5 py-10">
+      <LineGraph />
+    </div>
       </div>
 
       <div v-if="activeTab === 'Cuestionarios'">
@@ -201,8 +205,12 @@
 
 <script>
 import axios from 'axios';
+import LineGraph from '../components/LineGraph.vue'; // Go one level up
 
 export default {
+  components: {
+    LineGraph,
+  },
   props: ['id'], // Receive the patient ID from the route
   data() {
     return {
