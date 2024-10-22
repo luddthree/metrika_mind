@@ -1,7 +1,30 @@
 <template>
   <div class="p-6 bg-gray-50 min-h-screen">
     <div v-if="patient">
-      <p class="text-2xl text-gray-900 font-bold mb-4 mt-3 ml-2">{{ patient.name }}</p>
+      <div class="flex items-center">
+  <router-link 
+    to="/pacients" 
+    class="flex items-center p-2 rounded-lg hover:bg-white-transparent"
+  >
+    <div class="w-6 mr-3">
+      <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g data-name="Layer 2">
+            <g data-name="arrow-ios-back">
+              <rect width="24" height="24" transform="rotate(90 12 12)" opacity="0"></rect>
+              <path d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </router-link>
+  <p class="text-2xl text-gray-900 font-bold mb-4 mt-3 ml-2">{{ patient.name }}</p>
+</div>
+
+
 
       <!-- Tab Navigation -->
       <div class="border-b border-gray-300 mb-6 ml-6">
