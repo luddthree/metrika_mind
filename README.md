@@ -1,5 +1,6 @@
 
 # auth_config.json
+###### single page application
 ```json
 {
   "domain": "<YOUR AUTH0 DOMAIN>",
