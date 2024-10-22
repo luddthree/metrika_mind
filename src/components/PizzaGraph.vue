@@ -39,7 +39,7 @@ export default {
             questions: data[2],  // Number of questionnaires
           }))
           .sort((a, b) => b.questions - a.questions) // Sort in descending order
-          .slice(0, 5); // Keep only the top 15
+          .slice(0, 5); // Keep only the top 5
 
         this.renderChart();
       } catch (error) {
