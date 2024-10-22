@@ -12,20 +12,36 @@
         </div>
 
         <!-- Logout Button -->
-        <button
-          @click.prevent="logout"
-          class="flex items-center bg-transparent border-none focus:outline-none"
-        >
-          <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M17 16L21 12M21 12L17 8M21 12L7 12M13 16V17C13 18.6569 11.6569 20 10 20H6C4.34315 20 3 18.6569 3 17V7C3 5.34315 4.34315 4 6 4H10C11.6569 4 13 5.34315 13 7V8"
-              stroke="#374151"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
-        </button>
+        <div class="relative group">
+  <button
+    @click.prevent="logout"
+    class="flex items-center bg-transparent border-none focus:outline-none p-2"
+  >
+    <svg
+      fill="none"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+      class="group-hover:text-red-500 transition-colors"
+    >
+      <path
+        d="M17 16L21 12M21 12L17 8M21 12L7 12M13 16V17C13 18.6569 11.6569 20 10 20H6C4.34315 20 3 18.6569 3 17V7C3 5.34315 4.34315 4 6 4H10C11.6569 4 13 5.34315 13 7V8"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      />
+    </svg>
+  </button>
+
+  <!-- Pop-up Text Below -->
+  <div class="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 bg-gray-700 text-white text-sm rounded-lg px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+    Sailr
+  </div>
+</div>
+
+
       </div>
     </nav>
   </div>
